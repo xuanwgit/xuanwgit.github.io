@@ -4,6 +4,13 @@ theme: minima
 baseurl: "" # leave empty for user pages
 url: "https://xuanwgit.github.io"
 
+header_pages:
+  - index.md
+  - _codes/project1.md
+  - _stories/stories1.md
+  - _visions/vision1.md
+  - about.md
+
 collections:
   codes:
     output: true
