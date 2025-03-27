@@ -1,5 +1,13 @@
-# _config.yml
 title: Xuan Wang
-description: My personal site
+description: Developer · Writer · Photographer
 theme: minima
-author: Xuan
+baseurl: "" # leave empty for user pages
+url: "https://xuanwgit.github.io"
+
+collections:
+  codes:
+    output: true
+  stories:
+    output: true
+  visions:
+    output: true
