@@ -1,37 +1,51 @@
-@import "minima";
+@import
+  "minima"
+;
 
 // Custom styles
+$primary-color: #2c3e50;
+$accent-color: #3498db;
+$text-color: #333;
+$background-color: #fafafa;
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fafafa;
+    color: $text-color;
+    background-color: $background-color;
 }
 
 .site-header {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    padding: 2rem 0;
+    border-top: 0;
+    border-bottom: 0;
+    background: linear-gradient(135deg, $primary-color 0%, $accent-color 100%);
+    padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 
-.site-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.site-nav {
-    .page-link {
-        color: white;
-        font-weight: 500;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
+    .site-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: white !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         
-        &:hover {
-            background-color: rgba(255,255,255,0.1);
-            transform: translateY(-2px);
+        &:visited {
+            color: white;
+        }
+    }
+
+    .site-nav {
+        background: none;
+        border: none;
+        
+        .page-link {
+            color: white;
+            font-weight: 500;
+            margin-left: 1.5rem;
+            
+            &:hover {
+                text-decoration: none;
+                opacity: 0.8;
+            }
         }
     }
 }
@@ -72,13 +86,11 @@ body {
 }
 
 .page-content {
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .wrapper {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 // Collection grid layout
@@ -108,20 +120,70 @@ body {
     
     .item-content {
         padding: 1.5rem;
+        
+        h2 {
+            margin: 0 0 1rem;
+            font-size: 1.5rem;
+            color: $primary-color;
+        }
+        
+        p {
+            color: $text-color;
+            margin-bottom: 1rem;
+        }
+        
+        .post-link {
+            display: inline-block;
+            color: $accent-color;
+            text-decoration: none;
+            font-weight: 500;
+            
+            &:hover {
+                color: darken($accent-color, 10%);
+            }
+        }
     }
+}
+
+// Welcome page styling
+.welcome-section {
+    margin-bottom: 3rem;
     
     h2 {
-        margin: 0 0 1rem;
-        color: #2c3e50;
+        color: $primary-color;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: 1.1rem;
+        color: $text-color;
     }
 }
 
 // Footer styling
 .site-footer {
-    background: #2c3e50;
+    background: $primary-color;
     color: white;
     padding: 2rem 0;
-    margin-top: 3rem;
+    border-top: 0;
+    
+    .footer-col-wrapper {
+        color: white;
+    }
+    
+    .footer-col {
+        color: white;
+    }
+    
+    a {
+        color: $accent-color;
+        
+        &:hover {
+            color: lighten($accent-color, 10%);
+            text-decoration: none;
+        }
+    }
 }
 
 .social-media-list {
