@@ -6,9 +6,9 @@ url: "https://xuanwgit.github.io"
 
 header_pages:
   - index.md
-  - _codes/project1.md
-  - _stories/stories1.md
-  - _visions/vision1.md
+  - codes.md
+  - stories.md
+  - visions.md
   - about.md
 
 collections:
