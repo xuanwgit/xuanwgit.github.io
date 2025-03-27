@@ -1,0 +1,173 @@
+@import "minima";
+
+// Variables
+$primary-color: #2c3e50;
+$accent-color: #3498db;
+$text-color: #333;
+$background-color: #fafafa;
+
+// Global styles
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: $text-color;
+    background-color: $background-color;
+}
+
+// Header styles
+.site-header {
+    border-top: 0;
+    border-bottom: 0;
+    background: linear-gradient(135deg, $primary-color 0%, $accent-color 100%);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-title, .site-title:visited {
+    color: white !important;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.site-nav {
+    background: none;
+    border: none;
+    float: right;
+    
+    .page-link {
+        color: white;
+        margin-left: 1.5rem;
+        font-weight: 500;
+        
+        &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+        }
+    }
+}
+
+// Welcome page styles
+.welcome-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    
+    h2 {
+        color: $primary-color;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        color: $text-color;
+        margin-bottom: 1rem;
+    }
+    
+    a {
+        color: $accent-color;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+            color: darken($accent-color, 10%);
+            text-decoration: underline;
+        }
+    }
+}
+
+// Collection grid styles
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.collection-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .item-content {
+        padding: 1.5rem;
+        
+        h2 {
+            margin: 0 0 1rem;
+            color: $primary-color;
+        }
+        
+        p {
+            color: $text-color;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+// Footer styles
+.site-footer {
+    background: $primary-color;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    
+    .footer-col-wrapper {
+        color: rgba(255,255,255,0.8);
+    }
+    
+    a {
+        color: white;
+        
+        &:hover {
+            color: $accent-color;
+            text-decoration: none;
+        }
+    }
+}
+
+// Responsive adjustments
+@media screen and (max-width: 600px) {
+    .site-nav {
+        background-color: $primary-color;
+        border-color: darken($primary-color, 10%);
+        
+        .menu-icon > svg {
+            fill: white;
+        }
+    }
+    
+    .welcome-section {
+        padding: 1.5rem;
+        
+        h2 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+    }
+    
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+} 
