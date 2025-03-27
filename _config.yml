@@ -4,6 +4,10 @@ theme: minima
 baseurl: "" # leave empty for user pages
 url: "https://xuanwgit.github.io"
 
+sass:
+  style: compressed
+  sass_dir: _sass
+
 header_pages:
   - index.md
   - codes.md
