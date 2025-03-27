@@ -7,5 +7,5 @@ permalink: /codes/spotify-clone/
 ---
 
 Built a full-stack music streaming app using React, Node.js, MongoDB, and AWS. 🎧  
-GitHub Repo: [link](https://github.com/xuanwgit/spotify-clone)
+GitHub Repo: [link]([https://github.com/xuanwgit/spotify-clone](https://github.com/xuanwgit/Spitifo-Music-App-React))
 
